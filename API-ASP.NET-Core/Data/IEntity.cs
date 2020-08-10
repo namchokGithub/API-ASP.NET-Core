@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace API_ASP.NET_Core.Data
 {
-    public class IEntity
+    public interface IEntity
     {
+        int Id { get; set; }
     }
 }
