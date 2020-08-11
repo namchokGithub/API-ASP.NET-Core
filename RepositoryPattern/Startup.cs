@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using RepositoryPattern.Models;
+using RepositoryPattern.Data.EFCore;
 
 namespace RepositoryPattern
 {
@@ -31,6 +32,8 @@ namespace RepositoryPattern
 
             services.AddDbContext<MyDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MyDbContext")));
+
+            services.AddScoped<EfCoreMovieRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -13,6 +13,6 @@ namespace RepositoryPattern.Models
         {
         }
 
-        public DbSet<RepositoryPattern.Models.Movie> Movie { get; set; }
+        public DbSet<Movie> Movie { get; set; }
     }
 }
